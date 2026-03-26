@@ -1,0 +1,10 @@
+{
+  "scheduler": {
+    "enabled": true,
+    "cron": "*/5 * * * *",
+    "timeout_sec": 30
+  },
+  "allowList": [
+    "https://api.resend.com"
+  ]
+}

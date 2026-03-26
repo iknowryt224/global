@@ -1,0 +1,107 @@
+{
+  "theme": "hybrid",
+  "archetype": "Swiss & High-Contrast",
+  "brand_name": "Global Access",
+  "emotions": ["Trust", "Authority", "Precision", "Clarity"],
+  "colors": {
+    "primary": "#0A2463",
+    "primary_hover": "#1E3B8A",
+    "accent": "#FF5722",
+    "accent_hover": "#FF7043",
+    "background_light": "#F8F9FA",
+    "surface_light": "#FFFFFF",
+    "background_dark": "#0B1015",
+    "surface_dark": "#161B22",
+    "text_primary": "#0A0A0A",
+    "text_secondary": "#525252",
+    "text_primary_dark": "#F3F4F6",
+    "text_secondary_dark": "#9CA3AF",
+    "status": {
+      "pending": "#FBBF24",
+      "picked_up": "#60A5FA",
+      "in_transit": "#3B82F6",
+      "out_for_delivery": "#8B5CF6",
+      "delivered": "#10B981",
+      "failed_delivery": "#EF4444"
+    }
+  },
+  "typography": {
+    "heading_font": "Manrope",
+    "body_font": "IBM Plex Sans",
+    "mono_font": "JetBrains Mono",
+    "strategies": [
+      "Use Manrope in font-black or font-extrabold with tracking-tight for marketing headings.",
+      "Use IBM Plex Sans for dashboard data and body text for optimal numerical legibility.",
+      "Use JetBrains Mono tracking-[0.2em] uppercase for overlines, labels, and tracking IDs."
+    ],
+    "forbidden_fonts": ["Inter", "Roboto", "Open Sans", "Lato", "Space Grotesk"]
+  },
+  "layout_and_spacing": {
+    "dashboard_grid": "Mode B (High Density Grid): grid-cols-1 md:grid-cols-3 lg:grid-cols-4, tight gaps (gap-4 or gap-6).",
+    "marketing_grid": "Mode A (The Tetris Grid): grid-cols-1 md:grid-cols-8 lg:grid-cols-12, wide gaps (gap-8 or gap-12).",
+    "container_padding": "Generous spacing philosophy. Use p-6, p-8, p-12 for breathing room. Dashboard cards should have p-6.",
+    "alignment": "Left-align dense content and tabular data. Align buttons to container flow."
+  },
+  "surfaces_and_micro_themes": {
+    "dashboard_cards": "Flat Solid. 1px subtle border (border-border), no shadow. On hover: slight lift (-translate-y-1), subtle shadow (shadow-lg).",
+    "headers_nav": "Crystal Glassmorphism. bg-white/80 or bg-black/60, backdrop-blur-xl, backdrop-saturate-150, 1px bottom border. MUST NOT be completely transparent if content scrolls under.",
+    "marketing_hero": "Dark Industrial look. Dark overlay with high-contrast text and vibrant tracking search input.",
+    "status_badges": "Neumorphic / Pill-shaped. Sharp inner contrast, subtle background tint matching the status color."
+  },
+  "motion_and_interactions": {
+    "hover_states": "All interactive elements must explicitly change text color and background on hover (e.g., hover:bg-slate-900 hover:text-white).",
+    "transitions": "Use specific transition properties, NEVER 'transition: all'. (e.g., transition: transform 0.2s ease, opacity 0.2s ease).",
+    "micro_animations": "Staggered entrance for shipment history timeline lists. Pulse effect for 'In Transit' or 'Out for Delivery' status dots.",
+    "accessibility": "Respect prefers-reduced-motion."
+  },
+  "components_strategy": {
+    "ui_library": "Shadcn UI + Custom Tailwind",
+    "tables": "Shadcn Tables for shipment management and history. High density, clear row separation.",
+    "forms": "Shadcn Form, Input, Select for Shipment Creation. Use Select (not native <select>).",
+    "tracking_timeline": "Custom HTML/Tailwind vertical stepper/timeline using relative positioning, absolute borders for the connecting line.",
+    "toasts": "Sonner for shipment update notifications.",
+    "icons": "lucide-react"
+  },
+  "creative_enhancers": {
+    "landing_page_3d": "Use react-globe.gl on the landing page hero or features section to visualize global shipping routes. Ensure background is transparent (rgba(0,0,0,0)).",
+    "textures": "Subtle noise texture overlay over dark sections to prevent digital flatness.",
+    "data_viz": "Recharts / Shadcn charts for Admin analytics (shipments per day, success rates)."
+  },
+  "images": [
+    {
+      "url": "https://images.pexels.com/photos/35982637/pexels-photo-35982637.jpeg",
+      "category": "Hero / Marketing Background",
+      "description": "Large container ship across the open sea, ideal for global logistics landing page."
+    },
+    {
+      "url": "https://images.pexels.com/photos/6169132/pexels-photo-6169132.jpeg",
+      "category": "Driver / Carrier Section",
+      "description": "Delivery worker van logistics, suitable for Driver App feature section."
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1644079446600-219068676743",
+      "category": "Warehouse / Storage Feature",
+      "description": "Large warehouse filled with shelves for storage/enterprise solutions feature."
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1645736315000-6f788915923b",
+      "category": "Enterprise Services",
+      "description": "Forklift driving through pallets, good for about us or services."
+    }
+  ],
+  "testing": {
+    "data_testid_rules": "All interactive and key informational elements MUST include a data-testid attribute (e.g., data-testid='track-shipment-button'). Use kebab-case and role-based naming."
+  },
+  "universal_guidelines_for_main_agent": [
+    "Do not converge toward generic 'AI slop' aesthetics. Use high contrast, asymmetrical elements, and crisp borders.",
+    "Avoid complete transparent backgrounds for headers/dropdowns. Always use blur and saturation or solid color.",
+    "Do not center-align the app container globally (no .App { text-align: center; }).",
+    "Never use AI assistant emojis for icons. Use lucide-react.",
+    "Always use modern button styles (pill-shaped or sharp) with interaction animations.",
+    "Prioritize existing components from src/components/ui. Use named exports for components, default for pages.",
+    "For .js/.jsx extension files, do not use TypeScript specific syntax.",
+    "Implement real-time/mock tracking statuses dynamically with varying color codes based on status.",
+    "Never use generic placeholders. Use the provided image URLs.",
+    "Implement both dark and light themes (or a hybrid where marketing is dark/industrial and dashboard is high-contrast light)."
+  ]
+}
