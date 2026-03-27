@@ -5,9 +5,9 @@ echo "🔍 Render Build Script for Global Access Shipping"
 echo "=================================================="
 
 echo ""
-echo "📦 Step 1: Installing frontend dependencies..."
+echo "📦 Step 1: Installing ALL dependencies (including devDependencies)..."
 cd frontend
-npm ci --production
+npm ci
 
 echo ""
 echo "🔨 Step 2: Building production bundle..."
