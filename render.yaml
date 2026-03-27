@@ -1,0 +1,33 @@
+services:
+  - type: static_site
+    name: global-access-shipping
+    buildCommand: chmod +x render-build.sh && ./render-build.sh
+    staticPublishPath: ./frontend/build
+    pullRequestPreviewsEnabled: true
+    
+    routes:
+      # SPA routing - all non-file routes serve index.html
+      - path: /*
+        destination: /index.html
+    
+    # Environment variables
+    env:
+      - key: REACT_APP_SUPABASE_URL
+        value: ${SUPABASE_URL}
+      - key: REACT_APP_SUPABASE_ANON_KEY
+        value: ${SUPABASE_ANON_KEY}
+      - key: REACT_APP_ENVIRONMENT
+        value: production
+    
+    # Cache control headers
+    headers:
+      - path: "/"
+        values:
+          Cache-Control: "public, max-age=0, must-revalidate"
+          X-Content-Type-Options: nosniff
+          X-Frame-Options: SAMEORIGIN
+          X-XSS-Protection: "1; mode=block"
+      
+      - path: "/static/*"
+        values:
+          Cache-Control: "public, max-age=31536000, immutable"
