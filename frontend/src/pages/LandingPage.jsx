@@ -384,7 +384,7 @@ export default function LandingPage() {
               </span>
             </div>
             <div className="text-sm text-white/60 space-y-1 text-left md:text-right">
-              <p>Contact us: <a href="mailto:globala513@gmail.com" className="text-white underline">globala531@gmail.com</a></p>
+              <p>Email us: <a href="mailto:globala513@gmail.com" className="text-white underline">globala513@gmail.com</a></p>
               <p>Phone: <a href="tel:+233504624605" className="text-white underline">+233 504 624 605</a></p>
               <p>© 2024 Global Access Shipping. All rights reserved.</p>
             </div>
