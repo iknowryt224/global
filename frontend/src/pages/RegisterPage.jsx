@@ -179,8 +179,6 @@ export default function RegisterPage() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="customer">Customer</SelectItem>
-                  {/* <SelectItem value="driver">Driver / Courier</SelectItem> */}
-                  {/* <SelectItem value="admin">Admin</SelectItem>  */}
                 </SelectContent>
               </Select>
             </div>
