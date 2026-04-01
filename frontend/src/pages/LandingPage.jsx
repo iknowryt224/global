@@ -377,15 +377,17 @@ export default function LandingPage() {
       <footer className="bg-[#0A2463] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="flex items-center gap-2 mb-4 md:mb-0">
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-2 mb-4 md:mb-0">
               <Globe className="h-6 w-6" />
               <span className="font-bold text-lg tracking-tight" style={{ fontFamily: 'Manrope' }}>
                 GLOBAL ACCESS
               </span>
             </div>
-            <p className="text-sm text-white/60">
-              © 2024 Global Access Shipping. All rights reserved.
-            </p>
+            <div className="text-sm text-white/60 space-y-1 text-left md:text-right">
+              <p>Contact us: <a href="mailto:globala531@gmail.com" className="text-white underline">globala531@gmail.com</a></p>
+              <p>Phone: <a href="tel:+233504624605" className="text-white underline">+233 504 624 605</a></p>
+              <p>© 2024 Global Access Shipping. All rights reserved.</p>
+            </div>
           </div>
         </div>
       </footer>
